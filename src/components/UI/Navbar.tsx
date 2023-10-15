@@ -14,7 +14,7 @@ export default function Navbar() {
   // console.log(user);
   const logout = () => {
     signOut({
-      callbackUrl: "http://localhost:3000/login",
+      callbackUrl: "https://localservice.vercel.app/login",
     });
     localStorage.removeItem("user");
     router.push("/login");

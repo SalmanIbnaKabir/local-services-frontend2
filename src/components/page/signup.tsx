@@ -197,7 +197,7 @@ const SignUp = () => {
               <button
                 onClick={() =>
                   signIn("google", {
-                    callbackUrl: "http://localhost:3000/",
+                    callbackUrl: "https://localservice.vercel.app/profile",
                   })
                 }
                 className="btn btn-outline btn-primary"
@@ -209,7 +209,7 @@ const SignUp = () => {
               <button
                 onClick={() =>
                   signIn("github", {
-                    callbackUrl: "http://localhost:3000/",
+                    callbackUrl: "https://localservice.vercel.app/profile",
                   })
                 }
                 className="btn btn-outline btn-primary"
