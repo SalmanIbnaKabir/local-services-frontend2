@@ -18,7 +18,21 @@ export const userApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["user"],
     }),
+
+    allUser: build.query({
+      query: () => "/user",
+      providesTags: ["user"],
+    }),
+    singleUser: build.query({
+      query: (id) => `/user/${id}`,
+      providesTags: ["user"],
+    }),
   }),
 });
 
-export const { useUserLoginMutation, useUserSignupMutation } = userApi;
+export const {
+  useUserLoginMutation,
+  useUserSignupMutation,
+  useAllUserQuery,
+  useSingleUserQuery,
+} = userApi;

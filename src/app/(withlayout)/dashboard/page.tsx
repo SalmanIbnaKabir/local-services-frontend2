@@ -1,35 +1,45 @@
+"use client";
 import Link from "next/link";
 
 const DashboardPage = () => {
   return (
-    <div>
-      <div className="drawer lg:drawer-open">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
-          {/* Page content here */}
-          <label
-            htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
-          >
-            Open drawer
-          </label>
-        </div>
-        <div className="drawer-side">
-          <label
-            htmlFor="my-drawer-2"
-            aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            {/* Sidebar content here */}
-            <li>
-              <Link href="/order">Order</Link>
-            </li>
-            <li>
-              <Link href="/allUser">All User</Link>
-            </li>
-          </ul>
-        </div>
+    <div className="mt-5">
+      <h1 className="text-center font-bold my-5">Order Details</h1>
+      <div className="overflow-x-auto">
+        <table className="table">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Service</th>
+              <th>Payment</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            <tr>
+              <th>1</th>
+              <td>Electricians</td>
+              <td className="text-green-600">Completed</td>
+              <td className="bg-green-300">Accepted</td>
+            </tr>
+            {/* row 2 */}
+            <tr>
+              <th>2</th>
+              <td>Garden Cleaner</td>
+              <td className="text-red-500">Pending</td>
+              <td className="bg-yellow-300">Pending</td>
+            </tr>
+            {/* row 3 */}
+            <tr>
+              <th>3</th>
+              <td>Plumber</td>
+              <td className="text-red-500">Pending</td>
+              <td className="bg-yellow-300">Pending</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

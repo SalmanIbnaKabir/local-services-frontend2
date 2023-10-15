@@ -58,7 +58,7 @@ export default function Navbar() {
               className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
               {session?.user || user?.email ? (
-                <>
+                <ul>
                   <li>
                     <a onClick={logout}>Logout</a>
                   </li>
@@ -66,16 +66,21 @@ export default function Navbar() {
                     <Link href="/profile"> Profile</Link>
                   </li>
                   <li>
+                    <Link href="/feedback">Feedback</Link>
+                  </li>
+                  <li>
                     <Link href="/dashboard"> Dashboard</Link>
                   </li>
                   <li>
                     <Link href="/service"> Service</Link>
                   </li>
-                </>
+                </ul>
               ) : (
-                <li>
-                  <Link href="/login">Login</Link>
-                </li>
+                <ul>
+                  <li>
+                    <Link href="/login">Login</Link>
+                  </li>
+                </ul>
               )}
             </ul>
           </div>
