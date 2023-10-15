@@ -35,7 +35,7 @@ export default async function RootLayout({
               draggable
               pauseOnHover
             />
-            <Navbar />
+
             {children}
           </body>
         </html>

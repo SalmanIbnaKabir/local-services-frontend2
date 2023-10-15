@@ -63,6 +63,7 @@ const AllService = () => {
             id="pageSize"
             value={pageSize}
             onChange={handlePageSizeChange}
+            className="select select-primary select-sm "
           >
             <option value="5">5</option>
             <option value="10">10</option>

@@ -1,3 +1,4 @@
+import Navbar from "@/components/UI/Navbar";
 import SignUp from "@/components/page/signup";
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 const SignUpPage = () => {
   return (
     <div>
+      <Navbar />
       <SignUp />
     </div>
   );

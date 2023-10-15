@@ -1,3 +1,4 @@
+import Navbar from "@/components/UI/Navbar";
 import Login from "@/components/page/login";
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 const LoginPage = () => {
   return (
     <div>
+      <Navbar />
       <Login />
     </div>
   );
