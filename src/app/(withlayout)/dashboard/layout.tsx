@@ -72,7 +72,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
                   <Link href="/dashboard/allUser">All User</Link>
                 </li>
                 <li>
-                  <Link href="/dashboard/allUser">Create Service</Link>
+                  <Link href="/dashboard/createService">Create Service</Link>
                 </li>
                 <li>
                   <Link href="/dashboard/allUser">Manage Service</Link>

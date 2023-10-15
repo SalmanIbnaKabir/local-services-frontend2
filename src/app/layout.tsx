@@ -22,7 +22,7 @@ export default async function RootLayout({
   return (
     <Providers>
       <SessionProvider session={session}>
-        <html lang="en" data-theme="light">
+        <html lang="en" data-theme="light" className="scroll-smooth">
           <body className={inter.className}>
             <ToastContainer
               position="top-right"

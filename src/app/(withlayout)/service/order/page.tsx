@@ -2,11 +2,14 @@
 import { getFromLocalStorage } from "@/utils/localStorage";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-const FeedbackForm = () => {
+const OrderPage = () => {
+  const params = useSearchParams();
+  const orderId = params.get("orderId");
+  // console.log(orderId);
   const router = useRouter();
   const { data: session } = useSession();
   const userData = getFromLocalStorage("user") as string;
@@ -17,7 +20,8 @@ const FeedbackForm = () => {
       user?.email ||
       (session?.user?.email ? session?.user?.email : "user@email.com"),
     name: "",
-    suggestions: "",
+    address: "",
+    date: Date.now(),
   };
 
   const {
@@ -30,18 +34,18 @@ const FeedbackForm = () => {
   });
 
   const onSubmit = () => {
-    toast.success("Thanks For Your Feedback");
+    // console.log(data);
+    toast.success("Order Placed successfully");
     reset();
-    router.push("/");
+    router.push("/dashboard");
   };
   return (
     <div className="container mx-auto my-10">
-      <h1 className="text-center font-bold my-5">
-        Share Your Feedback and Help Us Improve
-      </h1>
+      <h1 className="text-center font-bold my-5">Order Details Form </h1>
 
       <div className="flex justify-center ">
         <div className="card w-96 bg-base-100 shadow-xl">
+          <p className="text-gray-500 text-center">OrderId: {orderId}</p>
           <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control">
               <label className="label">
@@ -100,53 +104,48 @@ const FeedbackForm = () => {
                 )}
               </label>
             </div>
-            <div className="rating">
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-blue-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-blue-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-blue-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-blue-400"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-blue-400"
-              />
-            </div>
 
-            <div className="from-control">
+            <div className="form-control">
               <label className="label">
-                <span className="label-text">Suggestions Box</span>
+                <span className="label-text">Select Date</span>
               </label>
-              <textarea
-                className="textarea textarea-primary w-full"
-                placeholder="Reviews"
-                {...register("suggestions", {
+              <input
+                type="date"
+                className="input input-bordered w-full max-w-xs"
+                {...register("date", {
                   required: {
                     value: true,
-                    message: "Please Provide Suggestions",
+                    message: "Please Provide a Date",
                   },
                 })}
               />
               <label className="label">
-                {errors.suggestions?.type === "required" && (
+                {errors.date?.type === "required" && (
                   <span className="label-text-alt text-red-500">
-                    {errors.suggestions.message as string}
+                    {errors.date.message as string}
+                  </span>
+                )}
+              </label>
+            </div>
+
+            <div className="from-control">
+              <label className="label">
+                <span className="label-text">Address</span>
+              </label>
+              <textarea
+                className="textarea textarea-primary w-full"
+                placeholder="Reviews"
+                {...register("address", {
+                  required: {
+                    value: true,
+                    message: "Please Provide a Address",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.address?.type === "required" && (
+                  <span className="label-text-alt text-red-500">
+                    {errors.address.message as string}
                   </span>
                 )}
               </label>
@@ -162,12 +161,4 @@ const FeedbackForm = () => {
   );
 };
 
-export default FeedbackForm;
-
-// Feedback Form
-// Fields for User's Name and Email
-// Rating Scale
-// Comments or Suggestions Box
-// Submit Button
-// Clear Form Button
-// Thank You Message
+export default OrderPage;

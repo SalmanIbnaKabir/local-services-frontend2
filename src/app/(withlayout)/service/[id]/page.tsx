@@ -52,7 +52,9 @@ const DetailsPage = ({ params }: any) => {
             </span>
           </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Order Service</button>
+            <Link href={`/service/order/?orderId=${data?._id}`}>
+              <button className="btn btn-primary">Order Service</button>
+            </Link>
           </div>
         </div>
       </div>

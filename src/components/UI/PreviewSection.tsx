@@ -1,9 +1,10 @@
+"use client";
 import Image from "next/image";
 
 const PreviewSection = () => {
   return (
     <div className="bg-gray-100 py-5">
-      <h1 className="text-center text-xl font-semibold mt-3">About Us</h1>
+      <h1 className="text-center text-2xl font-bold mt-3">About Us</h1>
       <div className="container md:grid grid-cols-2 mx-auto gap-8 items-center my-10 p-10 ">
         <div>
           <Image

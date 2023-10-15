@@ -25,6 +25,7 @@ const AllService = () => {
   const startIndex = (currentPage - 1) * pageSize;
   const endIndex = currentPage * pageSize;
   const currentPageItems = data?.data?.slice(startIndex, endIndex);
+
   return (
     <div className="container mx-auto my-5">
       <div className="text-sm breadcrumbs">

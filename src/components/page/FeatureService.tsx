@@ -1,3 +1,4 @@
+"use client";
 import Loading from "@/app/loading";
 import ServiceCard from "@/components/UI/ServiceCard";
 import Image from "next/image";
@@ -86,6 +87,11 @@ const FeatureService = () => {
               </div>
             </div>
           ))}
+      </div>
+      <div className="flex justify-center ">
+        <Link href="/service">
+          <button className="btn btn-success">All Service</button>
+        </Link>
       </div>
     </div>
   );

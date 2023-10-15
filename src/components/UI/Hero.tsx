@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="hero min-h-screen bg-[url('/image/hero.jpg')]">
@@ -13,7 +16,9 @@ export default function Hero() {
             online searches and unreliable recommendations. We&apos;ve made
             finding and hiring local services as easy as a few clicks.
           </p>
-          <button className="btn btn-secondary">Get Your Service</button>
+          <Link href="/service">
+            <button className="btn btn-success">Get Your Service</button>
+          </Link>
         </div>
       </div>
     </div>
