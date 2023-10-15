@@ -1,0 +1,58 @@
+[
+  {
+    "title": "John's Plumbing Services",
+    "category": "Plumbing",
+    "description": "Your trusted plumbing experts with over 10 years of experience.",
+    "image": "/image/image1.jpg",
+    "pricing": "$80/hour"
+  },
+  {
+    "title": "Smith Electrical Services",
+    "category": "Electrical",
+    "description": "Experienced electricians for residential and commercial projects.",
+    "image": "/image/image2.jpg",
+    "pricing": "Varies by project"
+  },
+  {
+    "title": "Green Thumb Landscaping",
+    "category": "Landscaping",
+    "description": "Creating beautiful landscapes for homes and businesses.",
+    "image": "/image/image3.jpg",
+    "pricing": "Custom quotes available"
+  },
+  {
+    "title": "Ace Roofing Solutions",
+    "category": "Roofing",
+    "description": "Roof repair and installation experts. Your roof, our responsibility.",
+    "image": "/image/image3.jpg",
+    "pricing": "$120/square foot"
+  },
+  {
+    "title": "Sparky's Electricians",
+    "category": "Electrical",
+    "description": "Quality electrical services for residential and commercial clients.",
+    "image": "/image/image1.jpg",
+    "pricing": "$85/hour"
+  },
+  {
+    "title": "Garden Delight Landscaping",
+    "category": "Landscaping",
+    "description": "Transforming outdoor spaces into lush and vibrant gardens.",
+    "image": "/image/image2.jpg",
+    "pricing": "$50/hour"
+  },
+  {
+    "title": "A1 Plumbing Experts",
+    "category": "Plumbing",
+    "description": "24/7 emergency plumbing services by certified professionals.",
+    "image": "/image/image3.jpg",
+    "pricing": "$90/hour"
+  },
+  {
+    "title": "Sunny Skies Roofing",
+    "category": "Roofing",
+    "description": "Roof replacement and repair specialists with a commitment to quality.",
+    "image": "/image/image3.jpg",
+    "pricing": "$100/square foot"
+  }
+]
